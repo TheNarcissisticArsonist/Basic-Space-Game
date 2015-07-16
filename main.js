@@ -66,6 +66,8 @@ function newGame() {
 
 var accelerationRate = 0.4;
 var rotationRate = 5;
+var gravity = 0.1;
+var gravityDir = 0;
 
 function updateData() {
   document.getElementById("pos").innerHTML = "pos:" + spaceship.pos;
@@ -88,6 +90,25 @@ function mainLoop() {
   else {
     spaceship.aclM = 0;
     spaceship.acl = [0, 0];
+  }
+
+  //Gravity
+  if(Math.random() * 100 < 1) {
+    gravityDir = Math.floor(Math.random() * 4 + 1);
+  }
+  switch(gravityDir) {
+    case 0: //down
+      spaceship.acl[1] += gravity;
+      break;
+    case 1: //right
+      spaceship.acl[0] += gravity;
+      break;
+    case 2: //up
+      spaceship.acl[1] -= gravity;
+      break;
+    case 3: //left
+      spaceship.acl[0] -= gravity;
+      break;
   }
 
   //Update velocity
