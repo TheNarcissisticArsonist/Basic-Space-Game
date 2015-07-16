@@ -12,6 +12,7 @@ var keys = {
   a: false,
   d: false
 };
+var gameScreen = document.getElementById("gameScreen");
 
 document.addEventListener("keydown", function(event) {
   switch(event.which) {
@@ -95,19 +96,24 @@ function mainLoop() {
   //Gravity
   if(Math.random() * 100 < 1) {
     gravityDir = Math.floor(Math.random() * 4 + 1);
+    gameScreen.style.border = "1px dotted black";
   }
   switch(gravityDir) {
     case 0: //down
       spaceship.acl[1] += gravity;
+      gameScreen.style.borderBottom = "1px dashed red";
       break;
     case 1: //right
       spaceship.acl[0] += gravity;
+      gameScreen.style.borderRight = "1px dashed red";
       break;
     case 2: //up
       spaceship.acl[1] -= gravity;
+      gameScreen.style.borderBottom = "1px dashed red";
       break;
     case 3: //left
       spaceship.acl[0] -= gravity;
+      gameScreen.style.borderBottom = "1px dashed red";
       break;
   }
 
