@@ -102,5 +102,11 @@ function mainLoop() {
     spaceship.angle += rotationRate;
   }
 
+  //Position
+  sprite.style.left = spaceship.pos[0] - 32 + "px";
+  sprite.style.top = spaceship.pos[1] - 32 + "px";
+  console.log(spaceship.pos[0] - 32 + "px");
+  console.log(spaceship.pos[1] - 32 + "px");
+
   updateData();
 }
