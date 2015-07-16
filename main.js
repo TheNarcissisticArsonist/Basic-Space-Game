@@ -54,6 +54,7 @@ document.getElementById("new").addEventListener("click", function() {
   spaceship.acl = [0, 0];
   spaceship.velM = 0;
   spaceship.aclM = 0;
+  spaceship.angle = 0;
   loop = window.setInterval(mainLoop, 33);
 });
 
