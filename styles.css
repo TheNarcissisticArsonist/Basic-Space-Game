@@ -8,3 +8,10 @@
   background-color: blue;
   display: inline-block;
 }
+
+#rocket {
+  position: relative;
+  z-index: 1000;
+  left: 568px;
+  top: 268px;
+}
