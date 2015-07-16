@@ -10,3 +10,9 @@ var spaceship = {
   aclY: 0,
   aclM: 0
 };
+
+var keys = {
+  w: false,
+  a: false,
+  d: false
+};
