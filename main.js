@@ -74,8 +74,8 @@ function mainLoop() {
   if(keys.w) {
     spaceship.aclM = accelerationRate;
     spaceship.acl = [
-      spaceship.aclM * Math.sin(spaceship.angle),
-      -1 * spaceship.aclM * Math.cos(spaceship.angle)
+      spaceship.aclM * Math.sin(spaceship.angle * Math.PI / 180),
+      -1 * spaceship.aclM * Math.cos(spaceship.angle * Math.PI / 180)
     ];
   }
   else {
