@@ -58,6 +58,7 @@ document.getElementById("new").addEventListener("click", function() {
 });
 
 var accelerationRate = 0.4;
+var rotationRate = 3;
 
 function updateData() {
   document.getElementById("pos").innerHTML = "pos:" + spaceship.pos;
@@ -91,6 +92,14 @@ function mainLoop() {
   //Update position
   for(i=0; i<2; i++) {
     spaceship.pos[i] += spaceship.vel[i];
+  }
+
+  //Update rotation
+  if(keys.a && !keys.d) {
+    spaceship.angle -= rotationRate;
+  }
+  else if(keys.d && !keys.a) {
+    spaceship.angle += rotationRate;
   }
 
   updateData();
