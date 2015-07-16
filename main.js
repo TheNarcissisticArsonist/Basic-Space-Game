@@ -59,17 +59,28 @@ document.getElementById("new").addEventListener("click", function() {
 
 var accelerationRate = 0.4;
 
+function updateData() {
+  document.getElementById("pos").innerHTML = "pos:" + spaceship.pos;
+  document.getElementById("vel").innerHTML = "vel:" + spaceship.vel;
+  document.getElementById("acl").innerHTML = "acl:" + spaceship.acl;
+  document.getElementById("velM").innerHTML = "velM:" + spaceship.velM;
+  document.getElementById("aclM").innerHTML = "aclM:" + spaceship.aclM;
+  document.getElementById("angle").innerHTML = "angle:" + spaceship.angle;
+}
+
 function mainLoop() {
   //Update acceleration
   if(keys.w) {
     spaceship.aclM = accelerationRate;
     spaceship.acl = [
-      spaceship.aclM * Math.sin(angle);
-      -1 * spaceship.aclM * Math.cos(angle);
+      spaceship.aclM * Math.sin(angle),
+      -1 * spaceship.aclM * Math.cos(angle)
     ];
   }
   else {
     spaceship.aclM = 0;
     spaceship.acl = [0, 0];
   }
+
+  updateData();
 }
