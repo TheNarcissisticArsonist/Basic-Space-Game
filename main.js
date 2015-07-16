@@ -43,6 +43,7 @@ document.addEventListener("keyup", function(event) {
 var firstGame = true;
 document.getElementById("new").addEventListener("click", function() {
   if(firstGame) {
+    firstGame = false;
   }
   else {
     window.clearInterval(loop);
