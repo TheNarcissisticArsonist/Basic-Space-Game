@@ -24,6 +24,9 @@ document.addEventListener("keydown", function(event) {
     case 68: //d
       keys.d = true;
       break;
+    case 78: //n
+      newGame();
+      break;
   }
 });
 document.addEventListener("keyup", function(event) {
@@ -41,7 +44,9 @@ document.addEventListener("keyup", function(event) {
 });
 
 var firstGame = true;
-document.getElementById("new").addEventListener("click", function() {
+document.getElementById("new").addEventListener("click", newGame);
+
+function newGame() {
   if(firstGame) {
     firstGame = false;
   }
@@ -57,7 +62,7 @@ document.getElementById("new").addEventListener("click", function() {
   spaceship.aclM = 0;
   spaceship.angle = 0;
   loop = window.setInterval(mainLoop, 33);
-});
+}
 
 var accelerationRate = 0.4;
 var rotationRate = 3;
