@@ -1,0 +1,10 @@
+#gameScreen {
+  border: 1px dotted black;
+  display: inline-block;
+  width: 1200px;
+  height: 600px;
+}
+#new {
+  background-color: blue;
+  display: inline-block;
+}
