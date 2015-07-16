@@ -107,5 +107,8 @@ function mainLoop() {
   sprite.style.left = spaceship.pos[0] - 32 + "px";
   sprite.style.top = spaceship.pos[1] - 32 + "px";
 
+  //Rotation
+  sprite.style.transform = "rotate(" + spaceship.angle + "deg)";
+
   updateData();
 }
