@@ -82,5 +82,11 @@ function mainLoop() {
     spaceship.acl = [0, 0];
   }
 
+  //Update Velocity
+  for(i=0; i<2; i++) {
+    spaceship.vel[i] += spaceship.acl[i];
+  }
+  spaceship.velM = Math.sqrt(Math.pow(spaceship.vel[0], 2) + Math.pow(spaceship.vel[1], 2));
+
   updateData();
 }
