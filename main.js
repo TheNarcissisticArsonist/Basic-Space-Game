@@ -65,7 +65,7 @@ function newGame() {
 }
 
 var accelerationRate = 0.4;
-var rotationRate = 3;
+var rotationRate = 5;
 
 function updateData() {
   document.getElementById("pos").innerHTML = "pos:" + spaceship.pos;
