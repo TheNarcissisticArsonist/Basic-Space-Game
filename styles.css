@@ -12,6 +12,6 @@
 #rocket {
   position: relative;
   z-index: 1000;
-  left: 568px;
-  top: 268px;
+  left: -1000px;
+  top: -1000px;
 }
