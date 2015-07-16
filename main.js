@@ -15,7 +15,7 @@ var keys = {
 
 document.addEventListener("keydown", function(event) {
   switch(event.which) {
-    case 85: //w
+    case 87: //w
       keys.w = true;
       break;
     case 65: //a
@@ -28,7 +28,7 @@ document.addEventListener("keydown", function(event) {
 });
 document.addEventListener("keyup", function(event) {
   switch(event.which) {
-    case 85: //w
+    case 87: //w
       keys.w = false;
       break;
     case 65: //a
