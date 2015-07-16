@@ -110,5 +110,24 @@ function mainLoop() {
   //Rotation
   sprite.style.transform = "rotate(" + spaceship.angle + "deg)";
 
+  //Collision detection
+  sqrt2 = Math.sqrt(2);
+  if(
+    spaceship.pos[0] > 1200 - 32 ||
+    spaceship.pos[0] < 0    + 32 ||
+    spaceship.pos[1] > 600  - 32 ||
+    spaceship.pos[1] < 0    + 32
+  ) {
+    for(i=0; i<2; i++) {
+      spaceship.pos[i] = 0;
+      spaceship.vel[i] = 0;
+      spaceship.acl[i] = 0;
+    }
+    spaceship.aclM = 0;
+    spaceship.velM = 0;
+    alert("You crashed!\nGame over!");
+    window.clearInterval(loop);
+  }
+
   updateData();
 }
