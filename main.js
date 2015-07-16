@@ -43,3 +43,14 @@ document.addEventListener("keyup", function(event) {
       break;
   }
 });
+
+var firstGame = true;
+document.getElementById("new").addEventListener("click", function() {
+  if(firstGame) {
+  }
+  else {
+    window.clearInterval(loop);
+  }
+  sprite.style.left = "568px";
+  sprite.style.top = "268px";
+});
