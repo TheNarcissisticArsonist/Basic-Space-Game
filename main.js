@@ -50,4 +50,9 @@ document.getElementById("new").addEventListener("click", function() {
   }
   sprite.style.left = "568px";
   sprite.style.top = "268px";
+  spaceship.pos = [600, 300];
+  spaceship.vel = [0, 0];
+  spaceship.acl = [0, 0];
+  spaceship.velM = 0;
+  spaceship.aclM = 0;
 });
