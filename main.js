@@ -78,6 +78,8 @@ function updateData() {
   document.getElementById("angle").innerHTML = "angle:" + spaceship.angle;
 }
 
+var field = document.getElementById("gameScreen");
+
 function mainLoop() {
   //Update acceleration
   if(keys.w) {
@@ -96,18 +98,23 @@ function mainLoop() {
   if(Math.random() * 100 < 1) {
     gravityDir = Math.floor(Math.random() * 4 + 1);
   }
+  field.style.border = "1px dotted black";
   switch(gravityDir) {
     case 0: //down
       spaceship.acl[1] += gravity;
+      field.style.borderBottom = "1px dashed red";
       break;
     case 1: //right
       spaceship.acl[0] += gravity;
+      field.style.borderRight = "1px dashed red";
       break;
     case 2: //up
       spaceship.acl[1] -= gravity;
+      field.style.borderTop = "1px dashed red";
       break;
     case 3: //left
       spaceship.acl[0] -= gravity;
+      field.style.borderLeft = "1px dashed red";
       break;
   }
 
