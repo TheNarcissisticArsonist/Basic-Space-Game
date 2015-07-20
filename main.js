@@ -96,7 +96,7 @@ function mainLoop() {
 
   //Gravity
   if(Math.random() * 100 < 1) {
-    gravityDir = Math.floor(Math.random() * 4 + 1);
+    gravityDir = Math.floor(Math.random() * 4);
   }
   field.style.border = "1px dotted black";
   switch(gravityDir) {
