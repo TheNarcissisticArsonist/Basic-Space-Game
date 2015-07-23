@@ -164,4 +164,7 @@ function mainLoop() {
   }
 
   updateData();
+  accelerationRate += 0.001;
+  rotationRate += 0.001;
+  gravity += 0.001;
 }
