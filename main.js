@@ -69,7 +69,7 @@ function newGame() {
 
 var accelerationRate = 0.6;
 var rotationRate = 5;
-var gravity = 0.1;
+var gravity = 0.2;
 var gravityDir = 0;
 
 function updateData() {
@@ -105,19 +105,19 @@ function mainLoop() {
   switch(gravityDir) {
     case 0: //down
       spaceship.acl[1] += gravity;
-      field.style.borderBottom = "1px dashed red";
+      field.style.borderBottom = "2px dashed red";
       break;
     case 1: //right
       spaceship.acl[0] += gravity;
-      field.style.borderRight = "1px dashed red";
+      field.style.borderRight = "2px dashed red";
       break;
     case 2: //up
       spaceship.acl[1] -= gravity;
-      field.style.borderTop = "1px dashed red";
+      field.style.borderTop = "2px dashed red";
       break;
     case 3: //left
       spaceship.acl[0] -= gravity;
-      field.style.borderLeft = "1px dashed red";
+      field.style.borderLeft = "2spx dashed red";
       break;
   }
 
