@@ -47,12 +47,10 @@ var firstGame = true;
 document.getElementById("new").addEventListener("click", newGame);
 
 function newGame() {
-  if(firstGame) {
-    firstGame = false;
-  }
-  else {
+  if(!firstGame) {
     window.clearInterval(loop);
   }
+  firstGame = false;
   sprite.style.left = "568px";
   sprite.style.top = "268px";
   spaceship.pos = [600, 300];
@@ -61,10 +59,15 @@ function newGame() {
   spaceship.velM = 0;
   spaceship.aclM = 0;
   spaceship.angle = 0;
+
+  keys.a = false;
+  keys.w = false;
+  keys.d = false;
+
   loop = window.setInterval(mainLoop, 33);
 }
 
-var accelerationRate = 0.4;
+var accelerationRate = 0.6;
 var rotationRate = 5;
 var gravity = 0.1;
 var gravityDir = 0;
