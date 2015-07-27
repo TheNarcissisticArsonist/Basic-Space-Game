@@ -64,12 +64,14 @@ function newGame() {
   keys.w = false;
   keys.d = false;
 
+  gravityDir = 0;
+
   loop = window.setInterval(mainLoop, 33);
 }
 
 var accelerationRate = 0.6;
-var rotationRate = 5;
-var gravity = 0.2;
+var rotationRate = 7.5;
+var gravity = 0.15;
 var gravityDir = 0;
 
 function updateData() {
@@ -117,7 +119,7 @@ function mainLoop() {
       break;
     case 3: //left
       spaceship.acl[0] -= gravity;
-      field.style.borderLeft = "2spx dashed red";
+      field.style.borderLeft = "2px dashed red";
       break;
   }
 
